@@ -1,5 +1,5 @@
-import path from 'path';
 import { readFileSync } from 'fs';
+import path from 'path';
 import { cwd } from 'process';
 import compare from './compare.js';
 
