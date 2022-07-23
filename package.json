@@ -5,7 +5,7 @@
   "description": "[![Actions Status](https://github.com/dmitryfirsanov/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/dmitryfirsanov/frontend-project-lvl2/actions)",
   "main": "..src/logic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest"
   },
   "repository": {
     "type": "git",
