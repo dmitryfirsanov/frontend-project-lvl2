@@ -1,29 +1,40 @@
-name: gendiff-github-actions
-on: push
+name: 'gendiff-github-actions'
+
+on:
+  - push
+  - pull_request
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on:  ubuntu-latest
 
     strategy:
       matrix:
-       node-version: [14.x]
+        node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm install
-      - run: make lint
-      - run: make test
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v3.0.0
-        env:
+    - uses: actions/checkout@v2
+    - name: Use Node ${{ matrix.node }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node }}
+      # Run install project
+    - name: npm install
+      run:
+        make install
+      env:
+        CI: true
+    - name: Run liner
+      run:
+        make lint
+    - name: Test & publish code coverage
+        # Publish code coverage on Code Climate
+        # https://github.com/paambaati/codeclimate-action
+      uses: paambaati/codeclimate-action@v3.0.0
+        # Add Code Climate secret key
+      env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
+      with:
           coverageCommand: make test-coverage
           debug: true
