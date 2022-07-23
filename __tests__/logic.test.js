@@ -1,5 +1,5 @@
 import { test, expect } from '@jest/globals';
-import {readFileSync} from 'fs';
+import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import genDiff from '../src/logic.js';
