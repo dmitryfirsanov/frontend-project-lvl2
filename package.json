@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/dmitryfirsanov/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/dmitryfirsanov/frontend-project-lvl2/actions)",
-  "main": "..src/logic.js",
+  "main": "..src/index.js",
   "scripts": {
     "test": "npx jest"
   },
@@ -20,6 +20,7 @@
   "dependencies": {
     "@jest/globals": "^28.1.3",
     "commander": "^9.4.0",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
