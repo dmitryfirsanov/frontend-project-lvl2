@@ -4,7 +4,8 @@ import { cwd } from 'process';
 import compare from './compare.js';
 import parser from './parser.js';
 
-const findFile = (file) => readFileSync(path.resolve(cwd(), '__fixtures__/', file), 'utf-8');
+const pathToFile = (file) => path.resolve(cwd(), '__fixtures__/', file);
+const findFile = (file) => readFileSync(pathToFile(file), 'utf-8');
 const getFormat = (file) => path.extname(file);
 
 const genDiff = (file1, file2) => {

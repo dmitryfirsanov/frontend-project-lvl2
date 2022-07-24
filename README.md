@@ -8,3 +8,5 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4382fd8964f087016d73/test_coverage)](https://codeclimate.com/github/dmitryfirsanov/frontend-project-lvl2/test_coverage)
 ## gendiff working with json files
 [![asciicast](https://asciinema.org/a/7yhZKABhfyF1x20nbVxwAnIs4.svg)](https://asciinema.org/a/7yhZKABhfyF1x20nbVxwAnIs4)
+## gendiff working with yml/yaml files
+[![asciicast](https://asciinema.org/a/ovAMcoyqj2hshpumB1FYD7sL7.svg)](https://asciinema.org/a/ovAMcoyqj2hshpumB1FYD7sL7)
