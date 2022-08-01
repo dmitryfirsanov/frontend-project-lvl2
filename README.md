@@ -1,4 +1,10 @@
-# gendiff
+# Description:
+CLI module for comparing changes in json/yml/yaml files
+# Installation
+1. Clone repository: `git@github.com:dmitryfirsanov/frontend-project-lvl1.git`.
+2. Run the command: `make install`.
+# How to use
+Use command `gendiff -h`;
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/dmitryfirsanov/frontend-project-lvl2/workflows/hexlet-check/badge.svg)](https://github.com/dmitryfirsanov/frontend-project-lvl2/actions)
 ### Github Actions
