@@ -27,7 +27,7 @@ const buildTree = (data1, data2) => {
       return {
         type: 'nested',
         key,
-        value: buildTree(data1[key], data2[key]),
+        children: buildTree(data1[key], data2[key]),
       };
     }
 
