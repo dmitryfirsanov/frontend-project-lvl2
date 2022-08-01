@@ -28,11 +28,11 @@ const stylish = (diff, replacer = '    ') => {
         return makeLine(node.value, '-');
       case 'unchanged':
         return makeLine(node.value, ' ');
-      case 'nested':
-        return `${indent}${node.key}: ${['{', ...iter(node.value, depth + 1), `${indent}}`].join('\n')}`;
       case 'changed':
         return [`${makeLine(node.value1, '-')}`,
           `${makeLine(node.value2, '+')}`].join('\n');
+      case 'nested':
+        return `${indent}${node.key}: ${['{', ...iter(node.value, depth + 1), `${indent}}`].join('\n')}`;
       default:
         throw new Error(`Type: ${node.type} is undefined`);
     }
