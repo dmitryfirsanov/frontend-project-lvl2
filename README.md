@@ -14,3 +14,5 @@
 [![asciicast](https://asciinema.org/a/itat9DqXYnKssK9sUzcQSRRyO.svg)](https://asciinema.org/a/itat9DqXYnKssK9sUzcQSRRyO)
 ## gendiff plain format working with nested json/yml/yaml files
 [![asciicast](https://asciinema.org/a/lMVLYv33VjNgyTEAOxNAlYNmF.svg)](https://asciinema.org/a/lMVLYv33VjNgyTEAOxNAlYNmF)
+## gendiff json format working with nested json/yml/yaml files
+[![asciicast](https://asciinema.org/a/821X0TsMAgNVVwmzpIzYT8o60.svg)](https://asciinema.org/a/821X0TsMAgNVVwmzpIzYT8o60)
