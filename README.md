@@ -12,6 +12,7 @@ CLI module for comparing changes in json/yml/yaml files
 2. Run the command: `make install`.
 # How to use
 Use command `gendiff -h`.
+You can format the difference in three styles: stylish (default), plain and json.
 ## gendiff working with json files
 [![asciicast](https://asciinema.org/a/7yhZKABhfyF1x20nbVxwAnIs4.svg)](https://asciinema.org/a/7yhZKABhfyF1x20nbVxwAnIs4)
 ## gendiff working with yml/yaml files
