@@ -27,7 +27,7 @@ jobs:
         make install
       env:
         CI: true
-    - name: Run liner
+    - name: Run linter
       run: |
         make lint
     - name: Test & publish code coverage
