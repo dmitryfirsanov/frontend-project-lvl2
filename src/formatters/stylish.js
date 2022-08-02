@@ -15,7 +15,7 @@ const stringify = (value, replacer, depth) => {
 };
 
 const stylish = (diff, replacer = '    ') => {
-  const iter = (tree, depth = 1) => tree.map((node) => {
+  const iter = (tree, depth = 1) => tree.flatMap((node) => {
     const indent = replacer.repeat(depth);
     const signIndent = indent.slice(2);
 
@@ -30,7 +30,7 @@ const stylish = (diff, replacer = '    ') => {
         return makeLine(node.value, ' ');
       case 'changed':
         return [`${makeLine(node.value1, '-')}`,
-          `${makeLine(node.value2, '+')}`].join('\n');
+          `${makeLine(node.value2, '+')}`];
       case 'nested':
         return `${indent}${node.key}: ${['{', ...iter(node.children, depth + 1), `${indent}}`].join('\n')}`;
       default:

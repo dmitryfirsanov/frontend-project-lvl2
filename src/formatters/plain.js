@@ -9,7 +9,7 @@ const stringify = (value) => {
 };
 
 const plain = (diff) => {
-  const iter = (tree, parent) => tree.flatMap((node) => {
+  const iter = (tree, parent) => tree.map((node) => {
     const path = [...parent, node.key].join('.');
 
     switch (node.type) {
@@ -18,17 +18,17 @@ const plain = (diff) => {
       case 'removed':
         return `Property '${path}' was removed`;
       case 'unchanged':
-        return [];
+        return null;
       case 'changed':
         return `Property '${path}' was updated. From ${stringify(node.value1)} to ${stringify(node.value2)}`;
       case 'nested':
-        return `${iter(node.children, [path]).join('\n')}`;
+        return `${_.compact(iter(node.children, [path])).join('\n')}`;
       default:
         throw new Error(`Type: ${node.type} is undefined`);
     }
   });
 
-  const plainDiff = iter(diff, []);
+  const plainDiff = _.concat(iter(diff, []));
   return [...plainDiff].join('\n');
 };
 

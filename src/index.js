@@ -1,19 +1,24 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 import buildTree from './buildTree.js';
-import parser from './parser.js';
-import formatter from './formatters/index.js';
+import makeParse from './parser.js';
+import makeFormat from './formatters/index.js';
 
-const pathToFile = (file) => path.resolve(process.cwd(), '__fixtures__/', file);
-const findContent = (file) => readFileSync(pathToFile(file), 'utf-8');
-const getFormat = (file) => path.extname(file);
+const getPathToFile = (file) => path.resolve(process.cwd(), '__fixtures__/', file);
+const getExtensions = (file) => path.extname(file).slice(1);
+
+const getContentFromFile = (filePath) => {
+  const fileContent = readFileSync(getPathToFile(filePath), 'utf-8');
+  const extension = getExtensions(filePath);
+  return makeParse(fileContent, extension);
+};
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
-  const file1 = parser(findContent(filepath1), getFormat(filepath1));
-  const file2 = parser(findContent(filepath2), getFormat(filepath2));
-  const diffInfo = buildTree(file1, file2);
+  const file1Content = getContentFromFile(filepath1);
+  const file2Content = getContentFromFile(filepath2);
+  const diffInfo = buildTree(file1Content, file2Content);
 
-  return formatter(diffInfo, formatName);
+  return makeFormat(diffInfo, formatName);
 };
 
 export default genDiff;
