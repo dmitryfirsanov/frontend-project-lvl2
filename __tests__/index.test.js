@@ -1,4 +1,3 @@
-import { test, expect } from '@jest/globals';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -17,8 +16,8 @@ const extensions = ['json', 'yaml', 'yml'];
 
 describe('test of all gendiff works', () => {
   test.each(extensions)('Format %s', (extension) => {
-    const file1 = `${process.cwd()}/__fixtures__/file1.${extension}`;
-    const file2 = `${process.cwd()}/__fixtures__/file2.${extension}`;
+    const file1 = getFixturePath(`file1.${extension}`);
+    const file2 = getFixturePath(`file2.${extension}`);
 
     expect(genDiff(file1, file2, 'stylish')).toEqual(expectedStylish);
     expect(genDiff(file1, file2, 'plain')).toEqual(expectedPlain);

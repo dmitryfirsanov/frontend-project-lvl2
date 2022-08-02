@@ -29,7 +29,7 @@ const plain = (diff) => {
   });
 
   const plainDiff = _.concat(iter(diff, []));
-  return [...plainDiff].join('\n');
+  return plainDiff.join('\n');
 };
 
 export default plain;
