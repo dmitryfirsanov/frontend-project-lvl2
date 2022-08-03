@@ -13,9 +13,9 @@ CLI module for comparing changes in json/yml/yaml files
 # How to use
 Use command `gendiff -h`.
 You can format the difference in three styles: stylish (default), plain and json.
-## gendiff stylish format working with nested json/yml/yaml files
+## gendiff stylish format working with json/yml/yaml files
 [![asciicast](https://asciinema.org/a/itat9DqXYnKssK9sUzcQSRRyO.svg)](https://asciinema.org/a/itat9DqXYnKssK9sUzcQSRRyO)
-## gendiff plain format working with nested json/yml/yaml files
+## gendiff plain format working with json/yml/yaml files
 [![asciicast](https://asciinema.org/a/lMVLYv33VjNgyTEAOxNAlYNmF.svg)](https://asciinema.org/a/lMVLYv33VjNgyTEAOxNAlYNmF)
-## gendiff json format working with nested json/yml/yaml files
+## gendiff json format working with json/yml/yaml files
 [![asciicast](https://asciinema.org/a/821X0TsMAgNVVwmzpIzYT8o60.svg)](https://asciinema.org/a/821X0TsMAgNVVwmzpIzYT8o60)
