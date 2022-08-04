@@ -8,7 +8,7 @@
 # Description:
 CLI module for comparing changes in json/yml/yaml files
 # Installation
-1. Clone repository: `git@github.com:dmitryfirsanov/frontend-project-lvl1.git`.
+1. Clone repository: `git@github.com:dmitryfirsanov/frontend-project-lvl2.git`.
 2. Run the command: `make install`.
 # How to use
 Use command `gendiff -h`.
